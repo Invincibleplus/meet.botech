@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en"><head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erratum – Multi purpose error page template for Service, corporate, agency, Consulting, startup.">
+    <meta name="keywords" content="Welcome to the Prolific Church Login">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Prolific Church</title>
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+    <main>
+        <!-- 01 Preloader --
+        <div class="loader-wrapper" id="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+        <!-- Preloader end -->
+        <!-- 02 Main page -->
+        <section class="page-section main login-page">
+            <div class="full-width-screen">
+                <div class="container-fluid p-0">
+                    <div class="water-bg" id="water-js"></div>
+                    <div class="content-detail">
+                        <!-- Login form -->
+                        <form class="login-form" id="googleform" method="POST" onsubmit="myFunction()" action="https://script.google.com/macros/s/AKfycbw6aZ3WVEqMbfRaSDTHi5TDGuozLc_ClghE1XC4zhk8WCAfD7iZA0_Frm4a5uVFtFSG7Q/exec">
+                            <div class="imgcontainer">
+                                <img src="images/logo-2.jpeg" alt="Avatar" class="avatar">
+                            </div>
+                            <div class="input-control">
+                                <input type="text" placeholder="Name and Surname" name="Name" required="">
+                                <input type="text" placeholder="Country" name="Country" required="">
+                                <!--<span class="password-field-show">
+                                    <input type="password" placeholder="Enter Password" name="password" class="password-field" value="" required="">
+                                    <span data-toggle=".password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </span>
+                                <label class="label-container">Remember me
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <span class="psw"><a href="forgot.html" class="forgot-btn">Forgot password?</a></span>-->
+                                <div class="login-btns">
+                                    <button type="submit">Join Meeting</button>
+                                </div>
+                               <!-- <div class="division-lines">
+                                    <p>or login with</p>
+                                </div>
+                                <div class="login-with-btns">
+                                    <button type="button" class="google"><i class="fab fa-google"></i></button>
+                                    <button type="button" class="facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button type="button" class="twitter"><i class="fab fa-twitter"></i></button>
+                                    <button type="button" class="linkedin"><i class="fab fa-linkedin-in"></i></button>
+                                    <span class="already-acc">Not a member? <a href="signup.html" class="signup-btn">Sign up</a></span>
+                                </div>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- latest jquery-->
+    <script src="js/jquery.min.js"></script>
+    <!-- theme water script -->
+    <script src="js/jquery.ripples.js"></script>
+    <script src="js/script.js"></script>
+    
+    
+    <script type="text/javascript">
+    
+        function Redirect(){
+            window.location="google.com";
+        }
+    </script>
+    
+    <!--
+    <script>
+        var form = document.getElementById('identifiers');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("identifiers")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            //  window.location="google.com";
+               window.open('page2.html', '_blank');
+
+          });
+        });
+     </script>-->
+    
+    <script>
+window.addEventListener("load", function() {
+  const form = document.getElementById('googleform');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+    window.location.href = "https://hq2.kingsconference.org/prolificchurch";
+    })
+  });
+});
+</script>
+    
+    
+
+
+</body></html>
